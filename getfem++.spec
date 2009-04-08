@@ -7,6 +7,7 @@ License:        LGPLv2+
 Group:          Development/C++
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildRequires:	blas-devel
+BuildRequires:	boost-static-devel
 Source0:	http://download.gna.org/getfem/stable/%name-%version.tar.gz
 
 %description
