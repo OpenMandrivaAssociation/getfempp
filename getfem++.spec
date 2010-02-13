@@ -1,6 +1,6 @@
 Name:           getfem++
 Summary:        Generic and efficient C++ library for finite element methods
-Version:        3.1
+Version:        4.0.0
 Release:        %mkrel 1
 Url:            http://home.gna.org/getfem/
 License:        LGPLv2+
@@ -8,7 +8,7 @@ Group:          Development/C++
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildRequires:	blas-devel
 BuildRequires:	boost-static-devel
-Source0:	http://download.gna.org/getfem/stable/%name-%version.tar.gz
+Source0:	http://download.gna.org/getfem/stable/getfem-%version.tar.gz
 
 %description
 The Getfem++ project focuses on the development of a generic and efficient 
@@ -31,7 +31,7 @@ arbitrary dimension (i.e. not only 2D and 3D problems).
 #--------------------------------------------------------------------
 
 %prep
-%setup -q
+%setup -qn getfem-%{version}
 
 %build
 export CFLAGS="%optflags -fno-strict-aliasing"
