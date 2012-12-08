@@ -1,0 +1,12 @@
+diff -urN getfem-4.2/superlu/util.c getfem-4.2-patched/superlu/util.c
+--- getfem-4.2/superlu/util.c	2012-02-26 07:38:14.000000000 +1100
++++ getfem-4.2-patched/superlu/util.c	2012-08-31 00:36:31.000000000 +1100
+@@ -27,7 +27,7 @@
+ 
+ void superlu_abort_and_exit(char* msg)
+ {
+-    fprintf(stderr, msg);
++    fprintf(stderr, "%s", msg);
+     exit (-1);
+ }
+ 
