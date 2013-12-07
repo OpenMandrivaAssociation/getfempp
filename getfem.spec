@@ -9,7 +9,7 @@
 Summary:	Generic and efficient C++ library for finite element methods
 Name:		getfem
 Version:	4.2
-Release:	5
+Release:	6
 License:	LGPLv2+
 Group:		Development/C++
 Url:		http://home.gna.org/getfem/
