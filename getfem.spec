@@ -17,6 +17,7 @@ Source0:	http://download.gna.org/getfem/stable/%{name}-%{version}.tar.gz
 Patch0:		getfem-4.3-idx_t.patch
 
 BuildRequires:	boost-devel
+BuildRequires:	metis-devel
 BuildRequires:	pkgconfig(blas)
 BuildRequires:	pkgconfig(muparser)
 Obsoletes:	getfem++ < 4.2-3
