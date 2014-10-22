@@ -1,2 +1,4 @@
+removed_sources:
+  getfem-4.2.tar.gz: 0701842e5664e30338e89550ac951f25169f0296
 sources:
-  "getfem-4.2.tar.gz": 0701842e5664e30338e89550ac951f25169f0296
+  getfem-4.3.tar.gz: f00a3aa38bd18b0e3e68c6a4546418ee43e02879
