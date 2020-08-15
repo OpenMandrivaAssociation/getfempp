@@ -2,19 +2,19 @@
 %define _enable_debug_packages %{nil}
 %define debug_package %{nil}
 
-%define	major	4
+%define	major	5
 %define	libname	%mklibname getfem %{major}
 %define	devname	%mklibname getfem -d
 
 Summary:	Generic and efficient C++ library for finite element methods
 Name:		getfem
-Version:	4.3
-Release:	5
+Version:	5.4.1
+Release:	1
 License:	LGPLv2+
 Group:		Development/C++
 Url:		http://home.gna.org/getfem/
 Source0:	http://download.gna.org/getfem/stable/%{name}-%{version}.tar.gz
-Patch0:		getfem-4.3-idx_t.patch
+#Patch0:		getfem-4.3-idx_t.patch
 
 BuildRequires:	boost-devel
 BuildRequires:	metis-devel
@@ -59,10 +59,10 @@ export CXX=g++
 	--enable-boost \
 	--enable-muparser \
 	--disable-python
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README COPYING
@@ -76,5 +76,5 @@ export CXX=g++
 %{_libdir}/libgetfem.so
 %{_includedir}/gmm
 %{_includedir}/getfem
-%{_includedir}/getfem_boost
+#{_includedir}/getfem_boost
 
