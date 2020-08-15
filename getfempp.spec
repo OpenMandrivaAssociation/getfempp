@@ -2,7 +2,7 @@
 %define _enable_debug_packages %{nil}
 %define debug_package %{nil}
 
-%define	major	4
+%define	major	5
 %define	libname	%mklibname getfem %{major}
 %define	devname	%mklibname getfem -d
 
