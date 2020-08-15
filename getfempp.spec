@@ -59,10 +59,10 @@ export CXX=g++
 	--enable-boost \
 	--enable-muparser \
 	--disable-python
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README COPYING
@@ -76,5 +76,5 @@ export CXX=g++
 %{_libdir}/libgetfem.so
 %{_includedir}/gmm
 %{_includedir}/getfem
-%{_includedir}/getfem_boost
+#{_includedir}/getfem_boost
 
