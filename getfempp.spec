@@ -52,8 +52,8 @@ applications which will use %{name}.
 
 %build
 export CFLAGS="%{optflags} -fno-strict-aliasing"
-#export CC=gcc
-#export CXX=g++
+export CC=gcc
+export CXX=g++
 %configure \
 	--enable-shared \
 	--enable-boost \
