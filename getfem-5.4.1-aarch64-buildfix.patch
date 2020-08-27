@@ -1,0 +1,12 @@
+diff -up getfem-5.4.1/src/Makefile.am.omv~ getfem-5.4.1/src/Makefile.am
+--- getfem-5.4.1/src/Makefile.am.omv~	2020-08-27 02:19:49.223672284 +0000
++++ getfem-5.4.1/src/Makefile.am	2020-08-27 02:20:02.552237839 +0000
+@@ -253,7 +253,7 @@ getfem/getfem_im_list.h : ../cubature/ge
+ lib_LTLIBRARIES = libgetfem.la
+ libgetfem_la_SOURCES = $(SRC)
+ libgetfem_la_LDFLAGS = ${LIBTOOL_VERSION_INFO}
+-libgetfem_la_LIBADD = @SUPERLU_LIBS@ @MUMPS_LIBS@
++libgetfem_la_LIBADD = @SUPERLU_LIBS@ @MUMPS_LIBS@ -lgcc
+ AM_CPPFLAGS = -I$(top_srcdir)/src -I../src -I$(top_srcdir)
+ 
+ CLEANFILES = ii_files/* *.o.d getfem/getfem_im_list.h 

@@ -14,7 +14,7 @@ License:	LGPLv2+
 Group:		Development/C++
 Url:		http://getfem.org/
 Source0:	http://download-mirror.savannah.gnu.org/releases/getfem/stable/getfem-%{version}.tar.gz
-#Patch0:		getfem-4.3-idx_t.patch
+Patch0:		getfem-5.4.1-aarch64-buildfix.patch
 
 BuildRequires:	boost-devel
 BuildRequires:	metis-devel
