@@ -12,7 +12,7 @@ Version:	5.4.2
 Release:	1
 License:	LGPLv2+
 Group:		Development/C++
-Url:		http://getfem.org/
+Url:		https://getfem.org/
 Source0:	http://download-mirror.savannah.gnu.org/releases/getfem/stable/getfem-%{version}.tar.gz
 Patch0:		getfem-5.4.1-aarch64-buildfix.patch
 
