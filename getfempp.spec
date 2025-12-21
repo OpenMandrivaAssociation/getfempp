@@ -16,6 +16,11 @@ Url:		https://getfem.org/
 Source0:	http://download-mirror.savannah.gnu.org/releases/getfem/stable/getfem-%{version}.tar.gz
 Patch0:		getfem-5.4.1-aarch64-buildfix.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	boost-devel
 BuildRequires:	metis-devel
 BuildRequires:	pkgconfig(blas)
