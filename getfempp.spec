@@ -8,17 +8,16 @@
 
 Summary:	Generic and efficient C++ library for finite element methods
 Name:		getfem
-Version:	5.4.2
+Version:	5.5
 Release:	1
 License:	LGPLv2+
 Group:		Development/C++
 Url:		https://getfem.org/
 Source0:	http://download-mirror.savannah.gnu.org/releases/getfem/stable/getfem-%{version}.tar.gz
-Patch0:		getfem-5.4.1-aarch64-buildfix.patch
+# aarch64 needs libgcc for the unwind symbols the C++ library references.
 
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool-base
 BuildRequires:	slibtool
 BuildRequires:	make
 BuildRequires:	boost-devel
@@ -35,7 +34,7 @@ element methods) on the largest class of methods and elements, and for
 arbitrary dimension (i.e. not only 2D and 3D problems).
 
 %package -n %{libname}
-Summary:	Main library for gupnp
+Summary:	Main library for getfem
 Group:		System/Libraries
 
 %description -n %{libname}
@@ -53,7 +52,7 @@ applications which will use %{name}.
 
 %prep
 %setup -q
-%autopatch -p1
+sed -i 's/^libgetfem_la_LIBADD = @SUPERLU_LIBS@ @MUMPS_LIBS@$/& -lgcc/' src/Makefile.am src/Makefile.in
 
 %build
 export CFLAGS="%{optflags} -fno-strict-aliasing"
