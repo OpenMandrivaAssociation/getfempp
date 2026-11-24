@@ -23,6 +23,7 @@ BuildRequires:	make
 BuildRequires:	boost-devel
 BuildRequires:	metis-devel
 BuildRequires:	pkgconfig(blas)
+BuildRequires:	pkgconfig(superlu)
 BuildRequires:	pkgconfig(muparser)
 Obsoletes:	getfem++ < 4.2-3
 
@@ -61,6 +62,7 @@ export CXX=g++
 %configure \
 	--enable-shared \
 	--enable-boost \
+	--enable-superlu \
 	--enable-muparser \
 	--disable-python
 %make_build
